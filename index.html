@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea de GitHub - SIS313</title>
+</head>
+<body>
+
+    <header>
+        <h1>PRÁCTICA N1 : GIT y GITHUB</h1>
+        <p><strong>Materia:</strong> Diseño y programacion_SIS_313_G1</p>
+        <p><strong>Nombre de Usuario en GitHub:</strong> ValeryAyllon </p>
+        <hr>
+    </header>
+
+    <main>
+        <article>
+
+            <section>
+                <h2>Pregunta 1</h2>
+                <p><strong>Enunciado:</strong> <em>Explicar paso a paso el registro de una cuenta en GitHub.</em></p>
+                
+                <h3>Respuesta:</h3>
+                <ol>
+                    <li>
+                        <strong>Ingresar a la plataforma:</strong> Entra al sitio web oficial 
+                        <a href="https://github.com" target="_blank">github.com</a> y haz clic en el botón <em>"Sign up"</em>.
+                    </li>
+                    <li>
+                        <strong>Completar datos de acceso:</strong> Ingresa tu correo electrónico, crea una contraseña segura y define un nombre de usuario único.
+                    </li>
+                    <li>
+                        <strong>Verificación de seguridad:</strong> Resuelve el captcha para verificar que eres humano e ingresa el código enviado a tu correo.
+                    </li>
+                </ol>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Pregunta 2</h2>
+                <p><strong>Enunciado:</strong> <em>Explicar paso a paso la creación de un repositorio en GitHub para la auxiliatura de la materia, el cual tendrá por nombre aux-sis313g1-i26-APELLIDOS_NOMBRES en APELLIDOS_NOMBRES colocar sus datos como indica.</em></p>
+                
+                <h3>Respuesta:</h3>
+                <ol>
+                    <li>
+                        <strong>Iniciar la creación:</strong> Ve al menú superior, haz clic en el icono <strong>"+"</strong> y selecciona la opción <strong>"New repository"</strong>.
+                    </li>
+                    <li>
+                        <strong>Configurar datos:</strong>
+                        <ul>
+                            <li><strong>Repository name:</strong> <code>aux-sis313g1-i26-Ayllon_Campero_valery_Estela </code></li>
+                            <li><strong>Visibilidad:</strong> Seleccionar la opción <code>Public</code>.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Inicializar:</strong> Marcar la casilla <em>"Add a README file"</em> y presionar el botón verde <strong>"Create repository"</strong>.
+                    </li>
+                </ol>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Pregunta 3</h2>
+                <p><strong>Enunciado:</strong> <em>Explicar paso a paso la secuencia de comandos para subir cambios al repositorio, empezando desde la clonación del repositorio creado en la pregunta 2.</em></p>
+                
+                <h3>Respuesta:</h3>
+                <p>Abre la consola o Git Bash en tu computadora y ejecuta la siguiente secuencia de comandos:</p>
+
+                <h3>a) Clonar el repositorio</h3>
+                <pre><code>git clone https://github.com/TU_USUARIO/aux-sis313g1-i26-APELLIDOS_NOMBRES.git</code></pre>
+
+                <h3>b) Entrar a la carpeta</h3>
+                <pre><code>cd aux-sis313g1-i26-APELLIDOS_NOMBRES</code></pre>
+
+                <h3>c) Preparar los archivos (Staging)</h3>
+                <pre><code>git add .</code></pre>
+
+                <h3>d) Registrar el commit</h3>
+                <pre><code>git commit -m "Primer avance de la materia"</code></pre>
+
+                <h3>e) Subir los cambios a GitHub</h3>
+                <pre><code>git push origin main</code></pre>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Pregunta 4</h2>
+                <p><strong>Enunciado:</strong> <em>Explicar paso a paso cómo realizar el deploy de una página web utilizando GitHub Pages.</em></p>
+                
+                <h3>Respuesta:</h3>
+                <ol>
+                    <li>
+                        <strong>Acceder a la configuración:</strong> Ingresa a tu repositorio y abre la pestaña <strong>Settings</strong>.
+                    </li>
+                    <li>
+                        <strong>Buscar la sección Pages:</strong> En el menú lateral izquierdo, selecciona la opción <strong>Pages</strong>.
+                    </li>
+                    <li>
+                        <strong>Configurar la rama de origen (Branch):</strong>
+                        <ul>
+                            <li>En <strong>Source</strong>, selecciona <em>"Deploy from a branch"</em>.</li>
+                            <li>En <strong>Branch</strong>, elige la rama <code>main</code> y carpeta <code>/ (root)</code>.</li>
+                            <li>Haz clic en <strong>Save</strong>.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Obtener el enlace del sitio:</strong> Espera unos minutos y recarga la página hasta que aparezca la URL pública generada (ejemplo: <code>https://tu_usuario.github.io/aux-sis313g1-i26-Ayllon_Campero_Valery_Estela/</code>).
+                    </li>
+                </ol>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+    
+    </footer>
+
+</body>
+</html>
