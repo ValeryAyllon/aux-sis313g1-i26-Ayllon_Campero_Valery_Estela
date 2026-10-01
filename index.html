@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica N° 2 - Página Principal</title>
+</head>
+<body>
+
+    <!-- CARÁTULA CON LOGOS Y DATOS -->
+    <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <tr>
+            <td align="center" width="15%">
+                <img src="imagen/logo_uatf.png" alt="Escudo UATF" width="80">
+            </td>
+            <td colspan="4" align="center">
+                <h2>UNIVERSIDAD AUTÓNOMA “TOMÁS FRÍAS”</h2>
+                <h3>INGENIERÍA DE SISTEMAS</h3>
+            </td>
+            <td align="center" width="15%">
+                <img src="imagen/logo_sistemas.png" alt="Logo Sistemas" width="80">
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#E0E0E0"><b>ESTUDIANTE:</b></td>
+            <td colspan="5">Valery Estela Ayllon Campero</td>
+        </tr>
+        <tr>
+            <td bgcolor="#E0E0E0"><b>DOCENTE:</b></td>
+            <td>Ing. Choque Matos Javier</td>
+            <td bgcolor="#E0E0E0"><b>MATERIA:</b></td>
+            <td colspan="3">SIS-313 G1</td>
+        </tr>
+        <tr>
+            <td bgcolor="#E0E0E0"><b>AUXILIAR:</b></td>
+            <td>Univ. Alex Sander Lopez Orcko</td>
+            <td bgcolor="#E0E0E0"><b>FECHA:</b></td>
+            <td>17/09/2026</td>
+            <td bgcolor="#E0E0E0"><b>PRÁCTICA N. 2</b></td>
+        </tr>
+        <tr>
+            <td colspan="6" align="center">
+                <h3>PRÁCTICA N2 – GIT, GITHUB Y HTML</h3>
+            </td>
+        </tr>
+    </table>
+
+    <br><hr><br>
+
+    <!-- PREGUNTAS Y RESPUESTAS DE GIT/GITHUB -->
+    <h2>Preguntas y Respuestas sobre Git y GitHub</h2>
+
+    <ol>
+        <li>
+            <h3>¿Qué es Git y cuál es su función principal dentro de un proyecto de desarrollo?</h3>
+            <p><b>Respuesta:</b> Git es un sistema de control de versiones distribuido. Su función principal es registrar y administrar los cambios realizados en el código fuente a lo largo del tiempo, permitiendo revertir estados anteriores, llevar un historial detallado y trabajar colaborativamente sin sobrescribir el trabajo de otros.</p>
+        </li>
+        <li>
+            <h3>¿Cuál es la diferencia entre Git y GitHub y qué función cumple cada uno?</h3>
+            <p><b>Respuesta:</b> Git es la herramienta de software local que gestiona el historial y control de versiones en tu computadora. GitHub es una plataforma en la nube que aloja repositorios de Git, permitiendo respaldar el proyecto en línea y colaborar de forma remota con otros desarrolladores.</p>
+        </li>
+        <li>
+            <h3>¿Qué pasos se deben seguir en Git para guardar los cambios realizados en un proyecto y crear un commit?</h3>
+            <p><b>Respuesta:</b></p>
+            <ul>
+                <li><code>git status</code> (opcional): Verifica los archivos modificados.</li>
+                <li><code>git add .</code> (o el nombre del archivo): Añade los cambios al área de preparación (Staging Area).</li>
+                <li><code>git commit -m "Mensaje descriptivo"</code>: Guarda la captura/estado de los cambios con un mensaje explicativo.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>¿Qué comandos se utilizan para conectar un repositorio local con un repositorio de GitHub y posteriormente subir los cambios? Explique brevemente la función de cada uno.</h3>
+            <p><b>Respuesta:</b></p>
+            <ul>
+                <li><code>git remote add origin &lt;URL_DEL_REPOSITORIO&gt;</code>: Vincula el repositorio local con el repositorio remoto de GitHub asignándole el nombre alias "origin".</li>
+                <li><code>git branch -M main</code>: Renombra la rama principal a "main" asegurando compatibilidad con el estándar actual.</li>
+                <li><code>git push -u origin main</code>: Sube la rama local "main" y sus commits al servidor remoto "origin", estableciendo el enlace predeterminado para futuros empujes.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>¿Qué es una rama (branch) en Git y en qué situaciones puede ser útil trabajar con una rama diferente a main?</h3>
+            <p><b>Respuesta:</b> Una rama es una línea independiente de desarrollo dentro del proyecto. Es útil para desarrollar nuevas funcionalidades, corregir errores o experimentar con código sin alterar la versión estable que se encuentra en la rama principal (<code>main</code>).</p>
+        </li>
+        <li>
+            <h3>Explique el proceso para crear una nueva rama, realizar cambios en ella y posteriormente subir esa rama a un repositorio de GitHub.</h3>
+            <p><b>Respuesta:</b></p>
+            <ol>
+                <li>Crear y cambiar a la nueva rama: <code>git checkout -b mi-nueva-rama</code> (o <code>git switch -c mi-nueva-rama</code>).</li>
+                <li>Realizar las modificaciones en el código.</li>
+                <li>Guardar los cambios en el historial local: <code>git add .</code> y luego <code>git commit -m "Nuevos cambios"</code>.</li>
+                <li>Subir la nueva rama a GitHub: <code>git push origin mi-nueva-rama</code>.</li>
+            </ol>
+        </li>
+        <li>
+            <h3>¿Qué es un conflicto en Git y qué pasos se deben seguir para resolverlo antes de combinar los cambios de una rama con main?</h3>
+            <p><b>Respuesta:</b> Un conflicto ocurre cuando Git no puede combinar automáticamente dos ramas porque se realizaron modificaciones distintas en la misma línea de un mismo archivo. Para resolverlo se siguen estos pasos:</p>
+            <ol>
+                <li>Intentar la fusión (<code>git merge nombre-rama</code>).</li>
+                <li>Abrir los archivos afectados señalados por Git y elegir manualmente qué código conservar (editando las marcas <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>).</li>
+                <li>Guardar los cambios corregidos.</li>
+                <li>Añadir los archivos resueltos: <code>git add .</code></li>
+                <li>Finalizar la fusión creando un commit de resolución: <code>git commit -m "Resolución de conflictos"</code>.</li>
+            </ol>
+        </li>
+    </ol>
+
+    <br><hr><br>
+
+    <!-- NAVEGACIÓN Y SECCIÓN DE HORARIOS -->
+    <h1>MI HORARIO</h1>
+    <p>Este es mi horario de la gestión 2026 semestre 2 =D</p>
+
+    <ul>
+        <li><a href="horario_materias.html" target="_blank" style="color: blue; font-weight: bold;">HORARIO DE MATERIAS</a></li>
+        <br>
+        <li><a href="horario_auxiliatura.html" target="_blank" style="color: blue; font-weight: bold;">HORARIO DE AUXILIATURA</a></li>
+    </ul>
+
+</body>
+</html>
