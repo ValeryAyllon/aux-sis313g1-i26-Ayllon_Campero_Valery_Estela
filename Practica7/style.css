@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-superior {
+    text-align: center;
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+    margin: 30px 0 0 0;
+    color: #111111;
+}
+
+/* Contenedor principal solicitado: margen 50px y relleno interno 50px */
+.contenedor-principal {
+    margin: 50px;
+    padding: 50px;
+    background-color: #dcdcdc;
+    display: grid;
+    gap: 28px;
+}
+
+.encabezado-practica {
+    text-align: center;
+}
+
+.encabezado-practica h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.linea-azul {
+    display: inline-block;
+    width: 38px;
+    height: 3px;
+    background-color: #1967d2;
+}
+
+.tarjeta-datos {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border-left: 4px solid #1967d2;
+    padding: 24px 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 40px;
+}
+
+.campo-dato {
+    display: grid;
+    gap: 4px;
+}
+
+.etiqueta {
+    font-size: 0.72rem;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.valor {
+    font-size: 0.92rem;
+    color: #111111;
+    font-weight: 700;
+}
+
+.subtitulo-niveles {
+    margin: 0 0 14px 0;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+.grid-niveles {
+    display: grid;
+    grid-template-columns: repeat(11, minmax(68px, 1fr));
+    gap: 12px;
+}
+
+.btn-nivel {
+    display: grid;
+    place-items: center;
+    padding: 9px 10px;
+    background-color: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 2px;
+}
+
+.btn-nivel.activo {
+    background-color: #1967d2;
+    color: #ffffff;
+}
+
+/* Colores base de las cajas para los niveles */
+.rojo {
+    background-color: #e60000;
+}
+
+.amarillo {
+    background-color: #ffff00;
+}
+
+.verde {
+    background-color: #008000;
+}
+
+.escenario-grid {
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+.caja {
+    border-radius: 8px;
+}
+
+.nivel-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 220px;
+    gap: 20px;
+}
+
+.nivel-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 60px);
+    gap: 20px;
+}
+
+.nivel-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 110px 110px;
+    gap: 20px;
+}
+
+.nivel-3 .rojo {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.nivel-3 .amarillo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.nivel-3 .verde {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.nivel-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 110px);
+    gap: 20px;
+}
+
+.nivel-4 .rojo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.nivel-4 .amarillo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.nivel-4 .verde {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.nivel-5 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: repeat(2, 110px);
+    gap: 20px;
+}
+
+.nivel-5 .rojo {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.nivel-5 .amarillo {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.nivel-5 .verde {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.nivel-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 130px 55px;
+    gap: 20px;
+}
+
+.nivel-6 .rojo {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.nivel-6 .amarillo {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.nivel-6 .verde {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.nivel-7 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 55px 125px;
+    gap: 20px;
+}
+
+.nivel-7 .rojo {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.nivel-7 .amarillo {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.nivel-7 .verde {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.nivel-8 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60px 130px;
+    grid-template-areas:
+        "rojo rojo rojo"
+        "amarillo verde verde";
+    gap: 20px;
+}
+
+.nivel-8 .rojo {
+    grid-area: rojo;
+}
+
+.nivel-8 .amarillo {
+    grid-area: amarillo;
+}
+
+.nivel-8 .verde {
+    grid-area: verde;
+}
+
+.nivel-9 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 100px);
+    grid-template-areas:
+        "rojo amarillo"
+        "rojo verde";
+    gap: 20px;
+}
+
+.nivel-9 .rojo {
+    grid-area: rojo;
+}
+
+.nivel-9 .amarillo {
+    grid-area: amarillo;
+}
+
+.nivel-9 .verde {
+    grid-area: verde;
+}
+
+.nivel-10 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 90px;
+    grid-template-areas:
+        "rojo amarillo"
+        "verde verde";
+    gap: 20px;
+}
+
+.nivel-10 .rojo {
+    grid-area: rojo;
+}
+
+.nivel-10 .amarillo {
+    grid-area: amarillo;
+}
+
+.nivel-10 .verde {
+    grid-area: verde;
+}
+
+.nivel-11 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 95px);
+    grid-template-areas:
+        "rojo verde"
+        "amarillo verde";
+    gap: 20px;
+}
+
+.nivel-11 .rojo {
+    grid-area: rojo;
+}
+
+.nivel-11 .amarillo {
+    grid-area: amarillo;
+}
+
+.nivel-11 .verde {
+    grid-area: verde;
+}
+
+.nivel-12 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 130px 35px;
+    grid-template-areas:
+        "rojo verde"
+        "amarillo amarillo";
+    gap: 20px;
+}
+
+.nivel-12 .rojo {
+    grid-area: rojo;
+}
+
+.nivel-12 .amarillo {
+    grid-area: amarillo;
+}
+
+.nivel-12 .verde {
+    grid-area: verde;
+}
+
+.barra-volver {
+    display: grid;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 10px 45px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
